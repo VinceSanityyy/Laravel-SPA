@@ -336,6 +336,9 @@
             <router-link to="/profile"> <i class="fa fa-user text-green"></i>  <span>Profile</span> </router-link>
         </li>
         <li class="treeview">
+            <router-link to="/developer"> <i class="fa fa-cogs text-purple"></i>  <span>Developer</span> </router-link>
+        </li>
+        <li class="treeview">
             <a href="#" >
               <i class="fa fa-cog text-red" ></i>
               <span>Management</span>
