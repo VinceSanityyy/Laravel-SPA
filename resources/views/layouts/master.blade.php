@@ -312,19 +312,21 @@
         </div>
         <div class="pull-left info">
           <p>{{ Auth::user()->name }} </p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+
+
+          <p>{{ Auth::user()->type }} </p>
         </div>
       </div>
       <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
+
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <input type="text" class="form-control" placeholder="Search..." @keyup="searchit" v-model="search">
           <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat" @click="searchit"><i class="fa fa-search"></i>
                 </button>
               </span>
         </div>
-      </form>
+
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -335,6 +337,7 @@
         <li class="treeview">
             <router-link to="/profile"> <i class="fa fa-user text-green"></i>  <span>Profile</span> </router-link>
         </li>
+        @can('isAdmin')
         <li class="treeview">
             <router-link to="/developer"> <i class="fa fa-cogs text-purple"></i>  <span>Developer</span> </router-link>
         </li>
@@ -351,7 +354,7 @@
 
             </ul>
           </li>
-
+          @endcan
 
     <!-- /.sidebar -->
   </aside>
@@ -612,6 +615,16 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('layout/js/demo.js')}}"></script>
 
-<script src="{{asset('js/app.js')}}"></script>
+@auth
+<script>
+    window.user = @json(auth()->user());
+</script>
+@endauth
+
+
+<script src="/js/app.js"></script>
+
+
+
 </body>
 </html>

@@ -1,8 +1,8 @@
 <template>
-  <div class="col-12">
-    <div class="box">
-      <div class="box-header">
-        <h3 class="box-title">Users Table</h3>
+  <div class="col-12" >
+    <div class="box" v-if="$gate.isAdmin()" >
+      <div class="box-header" >
+        <h3 class="box-title" >Users Table</h3>
         <div class="box-tools">
           <button class="btn btn-success" @click="newModal"  data-toggle="modal" data-target="#addNew">
             Add new
@@ -23,7 +23,7 @@
               <th>Modify</th>
             </tr>
 
-            <tr v-for="user in users" :key="user.id">
+            <tr v-for="user in users.data" :key="user.id">
               <td>{{user.id}}</td>
               <td>{{user.name}}</td>
               <td>{{user.email}}</td>
@@ -41,8 +41,15 @@
           </tbody>
         </table>
       </div>
+      <div class="class card-footer">
+          <pagination :data="users" @pagination-change-page="getResults"></pagination>
+      </div>
     </div>
 
+    <div v-if="!$gate.isAdmin()">
+        <h3 style="text-align:center">Access Denied</h3>
+        <not-found></not-found>
+    </div>
     <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -133,6 +140,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -152,7 +160,6 @@ export default {
       })
     };
   },
-
   methods: {
     updateUser(){
        this.form.put('api/user/' +this.form.id)
@@ -178,14 +185,14 @@ export default {
           this.form.reset();
           $('#addNew').modal('show');
     },
-
     loadUsers() {
-      axios.get("api/user").then(({ data }) => (this.users = data.data));
+            if(this.$gate.isAdmin()){
+                 axios.get("api/user").then(({ data }) => (this.users = data));
+            }
     },
     createUser() {
       this.$Progress.start();
       this.form.post("api/user")
-
       .then(() => {
         $("#addNew").modal("hide");
         $(".modal-backdrop").remove();
@@ -207,30 +214,46 @@ export default {
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!"
       }).then(result => {
-
           //send delete request
            if (result.value) {
           this.form.delete('api/user/' +id)
             .then(()=>{
-
                 swal.fire("Deleted!", "", "success");
                  Fire.$emit("AfterCreate")
-
             })
             .catch(()=>{
                 swal.fire("Something went wrong.", "", "warning");
             });
            }
       });
-
-    }
+    },
+    // Our method to GET results from a Laravel endpoint
+		getResults(page = 1) {
+			axios.get('api/user?page=' + page)
+				.then(response => {
+					this.users = response.data;
+				});
+		}
   },
-  created() {
-    console.log("Component mounted.");
-    this.loadUsers();
-    Fire.$on("AfterCreate",()=> {
-      this.loadUsers();
-    });
-  }
+  created()
+     {
+         Fire.$on('searching', ()=> {
+             let query = this.$parent.search
+             axios.get('api/findUser?q=' +query)
+                .then((data)=>{
+                    this.users = data.data
+                })
+                .catch(()=>{
+                     swal.fire("Something went wrong.", "", "warning");
+                })
+         })
+
+
+
+            this.loadUsers();
+            Fire.$on("AfterCreate",()=> {
+            this.loadUsers();
+        })
+    }
 };
 </script>

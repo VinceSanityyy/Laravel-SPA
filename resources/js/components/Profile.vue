@@ -15,8 +15,8 @@
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header"
             style="background-image: url('/img/tide.jpg'); ">
-              <h3 class="widget-user-username">Alexander Pierce</h3>
-              <h5 class="widget-user-desc">Founder &amp; CEO</h5>
+              <h3 class="widget-user-username">{{this.form.name}}</h3>
+              <h5 class="widget-user-desc">{{this.form.type}}</h5>
             </div>
             <div class="widget-user-image">
               <img class="img-circle" :src="getProfilePhoto()" alt="User Avatar">
@@ -203,8 +203,8 @@
             },
 
             getProfilePhoto(){
-                 let prefix = (this.form.photo.match(/\//) ? '' : '/img/profile/');
-                 return prefix + this.form.photo;
+                 let photo = (this.form.photo.length > 200)  ? this.form.photo : "img/profile/" + this.form.photo ;
+                 return photo;
             }
         },
         mounted() {

@@ -1,12 +1,18 @@
 Vue.prototype.$toast = toast
 require('./bootstrap');
 
+
+
+
 import Vue from 'vue'
 import { Form, HasError, AlertError } from 'vform'
 import moment from 'moment'
 import VueRouter from 'vue-router'
 import VueProgressBar from 'vue-progressbar'
 import swal from 'sweetalert2'
+
+import Gate from "./Gate";
+Vue.prototype.$gate = new Gate(window.user);
 
 
 window.swal = swal;
@@ -17,7 +23,7 @@ window.Vue = require('vue');
 Vue.use(VueRouter)
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
-
+Vue.component('pagination', require('laravel-vue-pagination'));
 
 const toast = swal.mixin({
     toast: true,
@@ -40,7 +46,8 @@ const routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default},
     { path: '/users', component: require('./components/Users.vue').default},
-    { path: '/developer', component: require('./components/Developer.vue').default}
+    { path: '/developer', component: require('./components/Developer.vue').default},
+    { path: '*', component: require('./components/NotFound.vue').default}
   ]
 
 const router = new VueRouter({
@@ -74,6 +81,11 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue').default
 );
 
+Vue.component(
+    'not-found',
+    require('./components//NotFound.vue').default
+);
+
 Vue.component('dashboard', require('./components/Dashboard.vue').default);
 Vue.component('profile', require('./components/Profile.vue').default);
 Vue.component('users', require('./components/Users.vue').default);
@@ -81,5 +93,13 @@ Vue.component('users', require('./components/Users.vue').default);
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    data: {
+        search: ''
+    },
+    methods:{
+        searchit: _.debounce(()=>{
+            Fire.$emit('searching');
+        },1000)
+    }
 });
