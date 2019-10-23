@@ -2,7 +2,7 @@
     <div class="container">
 
             <div class="col-md-12">
-                <not-found></not-found>
+            <graph></graph>
             </div>
 
     </div>

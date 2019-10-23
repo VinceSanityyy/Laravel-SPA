@@ -11,6 +11,14 @@ import VueRouter from 'vue-router'
 import VueProgressBar from 'vue-progressbar'
 import swal from 'sweetalert2'
 
+import Graph from './components/Graph.vue'
+
+import VueFusionCharts from 'vue-fusioncharts';
+import FusionCharts from 'fusioncharts';
+
+
+Vue.use(VueFusionCharts, FusionCharts);
+
 import Gate from "./Gate";
 Vue.prototype.$gate = new Gate(window.user);
 
@@ -47,6 +55,7 @@ const routes = [
     { path: '/profile', component: require('./components/Profile.vue').default},
     { path: '/users', component: require('./components/Users.vue').default},
     { path: '/developer', component: require('./components/Developer.vue').default},
+    { path: '/graph', component: require('./components/Graph.vue').default},
     { path: '*', component: require('./components/NotFound.vue').default}
   ]
 
@@ -89,6 +98,7 @@ Vue.component(
 Vue.component('dashboard', require('./components/Dashboard.vue').default);
 Vue.component('profile', require('./components/Profile.vue').default);
 Vue.component('users', require('./components/Users.vue').default);
+Vue.component('graph', require('./components/Graph.vue').default);
 
 
 const app = new Vue({

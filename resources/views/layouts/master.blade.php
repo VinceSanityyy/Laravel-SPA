@@ -337,10 +337,13 @@
         <li class="treeview">
             <router-link to="/profile"> <i class="fa fa-user text-green"></i>  <span>Profile</span> </router-link>
         </li>
-        @can('isAdmin')
         <li class="treeview">
+          <router-link to="/graph"> <i class="fa fa-paper text-green"></i>  <span>Graph</span> </router-link>
+      </li>
+        @can('isAdmin')
+        {{-- <li class="treeview">
             <router-link to="/developer"> <i class="fa fa-cogs text-purple"></i>  <span>Developer</span> </router-link>
-        </li>
+        </li> --}}
         <li class="treeview">
             <a href="#" >
               <i class="fa fa-cog text-red" ></i>
@@ -578,6 +581,7 @@
 <!-- jQuery 3 -->
 <script src="{{asset('layout/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('layout/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>

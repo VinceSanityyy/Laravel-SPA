@@ -29,6 +29,7 @@ class UserController extends Controller
         // $this->authorize('isAdmin');
 
         if (Gate::allows('isAdmin') || Gate::allows ('isAuthor')) {
+           
             return User::latest()->paginate(10);
         }
 
@@ -165,5 +166,19 @@ class UserController extends Controller
           $users = User::latest()->paginate(5);
         }
         return $users;
+    }
+
+    public function getGraph(){
+        if (Gate::allows('isAdmin') || Gate::allows ('isAuthor')) {
+        //  $users = \DB::table('users')->groupBy('type')->count();
+
+         
+
+         $users = \DB::table('users')
+                     ->select(\DB::raw('count(*) as type'))
+                     ->groupBy('type')
+                     ->get();
+         return response()->json($users);
+        }
     }
 }

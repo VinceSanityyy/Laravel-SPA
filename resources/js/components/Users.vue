@@ -12,7 +12,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body table-responsive no-padding">
-        <table class="table table-hover">
+        <table id="myTable" name="myTable" class="table table-hover">
           <tbody>
             <tr>
               <th>ID</th>
@@ -22,7 +22,7 @@
               <th>Registered</th>
               <th>Modify</th>
             </tr>
-
+    
             <tr v-for="user in users.data" :key="user.id">
               <td>{{user.id}}</td>
               <td>{{user.name}}</td>
@@ -144,6 +144,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -188,6 +189,7 @@ export default {
     loadUsers() {
             if(this.$gate.isAdmin()){
                  axios.get("api/user").then(({ data }) => (this.users = data));
+              
             }
     },
     createUser() {
@@ -248,12 +250,15 @@ export default {
                 })
          })
 
-
-
+  
+        
             this.loadUsers();
             Fire.$on("AfterCreate",()=> {
             this.loadUsers();
+           
         })
-    }
+    },
+    
 };
 </script>
+
