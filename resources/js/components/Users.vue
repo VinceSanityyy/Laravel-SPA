@@ -42,7 +42,7 @@
         </table>
       </div>
       <div class="class card-footer">
-          <pagination :data="users" @pagination-change-page="getResults"></pagination>
+          <!-- <pagination :data="users" @pagination-change-page="getResults"></pagination> -->
       </div>
     </div>
 

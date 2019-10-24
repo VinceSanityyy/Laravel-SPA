@@ -46,7 +46,6 @@ export default {
                         "value": data[x].count
                     })
                 }
-
             })
        }
 
@@ -55,6 +54,7 @@ export default {
     //    this.dataSource.data = this.users
         // console.log(users);
        this.getdata();
+     
     }
 }
 
