@@ -341,9 +341,9 @@
           <router-link to="/graph"> <i class="fa fa-paper text-green"></i>  <span>Graph</span> </router-link>
       </li>
         @can('isAdmin')
-        {{-- <li class="treeview">
+        <li class="treeview">
             <router-link to="/developer"> <i class="fa fa-cogs text-purple"></i>  <span>Developer</span> </router-link>
-        </li> --}}
+        </li>
         <li class="treeview">
             <a href="#" >
               <i class="fa fa-cog text-red" ></i>

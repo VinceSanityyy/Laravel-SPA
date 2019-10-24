@@ -46,9 +46,11 @@ export default {
                 this.dataSource.data.push({
                 'label': "Users",
                 'value': res.data.type,
+                
             })
+            console.log(res)
                 // this.dataSource.value = this.users
-                console.log(res)
+              
             })
        }
 
@@ -57,6 +59,7 @@ export default {
     //    this.dataSource.data = this.users
         // console.log(users);
        this.getdata();
+     
     }
 }
 

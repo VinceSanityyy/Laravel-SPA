@@ -178,7 +178,9 @@ class UserController extends Controller
                      ->select(\DB::raw('count(*) as type'))
                      ->groupBy('type')
                      ->get();
+
          return response()->json($users);
+        //  return \Response::json(users);
         }
     }
 }
