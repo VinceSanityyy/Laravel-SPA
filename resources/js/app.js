@@ -16,6 +16,8 @@ import Graph from './components/Graph.vue'
 import VueFusionCharts from 'vue-fusioncharts';
 import FusionCharts from 'fusioncharts';
 
+import '../../node_modules/ag-grid-community/dist/styles/ag-grid.css' // ag-grid
+import '../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css' // ag-grid
 
 Vue.use(VueFusionCharts, FusionCharts);
 

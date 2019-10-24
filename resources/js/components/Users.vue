@@ -12,7 +12,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body table-responsive no-padding">
-        <table id="myTable" name="myTable" class="table table-hover">
+        <!-- <table id="myTable" name="myTable" class="table table-hover">
           <tbody>
             <tr>
               <th>ID</th>
@@ -39,7 +39,12 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
+        <ag-grid-vue style="width: auto; height: 500px;"
+          class="ag-theme-balham"
+          :columnDefs="columnDefs"
+          :rowData="rowData">
+        </ag-grid-vue>
       </div>
       <div class="class card-footer">
           <!-- <pagination :data="users" @pagination-change-page="getResults"></pagination> -->
@@ -144,6 +149,8 @@
 </template>
 
 <script>
+import {AgGridVue} from "ag-grid-vue"
+import modify_button from "./ModifyActionComponent"
 
 export default {
   data() {
@@ -158,8 +165,24 @@ export default {
         type: "",
         bio: "",
         photo: ""
-      })
+      }),
+      columnDefs: null,
+      rowData: null
     };
+  },
+  components: {
+    AgGridVue,
+    modify_button
+  },
+  beforeMount() {
+    this.columnDefs = [
+        {headerName: 'ID', field: 'id'},
+        {headerName: 'Name', field: 'name'},
+        {headerName: 'Email', field: 'email'},
+        {headerName: 'Type', field: 'type'},
+        {headerName: 'Registered', field: 'created_at'},
+        {headerName: 'Modify', field: 'id', cellRendererFramework: 'modify_button' },
+    ];
   },
   methods: {
     updateUser(){
@@ -188,14 +211,16 @@ export default {
     },
     loadUsers() {
             if(this.$gate.isAdmin()){
-                 axios.get("api/user").then(({ data }) => (this.users = data));
+                 axios.get("api/user").then(({ data })=>{
+                   this.rowData = data.data
+                 })
               
             }
     },
     createUser() {
       this.$Progress.start();
       this.form.post("api/user")
-      .then(() => {
+      .then(({data}) => {
         $("#addNew").modal("hide");
         $(".modal-backdrop").remove();
         toast.fire({
@@ -203,7 +228,7 @@ export default {
           title: "User Created!",
           position: "top-end"
         });
-     Fire.$emit("AfterCreate")
+        this.rowData.push(data)
       });
       this.$Progress.finish();
     },
@@ -221,7 +246,12 @@ export default {
           this.form.delete('api/user/' +id)
             .then(()=>{
                 swal.fire("Deleted!", "", "success");
-                 Fire.$emit("AfterCreate")
+                //  Fire.$emit("AfterCreate")
+               let userIndex = this.rowData.findIndex((data) =>{
+                 return data.id == id
+               })
+
+               this.rowData.splice(userIndex,1)
             })
             .catch(()=>{
                 swal.fire("Something went wrong.", "", "warning");
@@ -253,11 +283,16 @@ export default {
   
         
             this.loadUsers();
-            Fire.$on("AfterCreate",()=> {
-            this.loadUsers();
-           
-        })
     },
+  mounted() {
+    Fire.$on('updated', data => {
+      this.editModal(data)
+    })
+
+    Fire.$on('deleted', id => {
+      this.deleteUser(id)
+    })
+  }
     
 };
 </script>
