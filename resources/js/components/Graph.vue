@@ -39,6 +39,7 @@ export default {
 
           getdata(){
            axios.get('api/graphs')
+<<<<<<< HEAD
             .then(({data})=>{
                 for(let x in data){
                     this.dataSource.data.push({
@@ -46,6 +47,18 @@ export default {
                         "value": data[x].count
                     })
                 }
+=======
+            .then(res=>{
+                this.users = res.data;
+                this.dataSource.data.push({
+                'label': "Users",
+                'value': res.data.type,
+                
+            })
+            console.log(res)
+                // this.dataSource.value = this.users
+              
+>>>>>>> master
             })
        }
 
