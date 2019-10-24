@@ -172,15 +172,14 @@ class UserController extends Controller
         if (Gate::allows('isAdmin') || Gate::allows ('isAuthor')) {
         //  $users = \DB::table('users')->groupBy('type')->count();
 
+        
+        $ext = User::all();
+        $grouped = $ext->groupBy('type')->map(function($item, $key) {
+            return ['count' => collect($item)->count()];
+        });
+
+        return $grouped;
          
-
-         $users = \DB::table('users')
-                     ->select(\DB::raw('count(*) as type'))
-                     ->groupBy('type')
-                     ->get();
-
-         return response()->json($users);
-        //  return \Response::json(users);
         }
     }
 }

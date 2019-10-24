@@ -20,27 +20,34 @@ export default {
    
     data() {
         return {
-            
             users: [],
-            "type": "doughnut2d",
-            "renderAt": "chart-container",
-            "width": "550",
-            "height": "350",
-            "dataFormat": 'json',
-            "dataSource": {
-                "chart": {
+            type: "doughnut2d",
+            renderAt: "chart-container",
+            width: "550",
+            height: "350",
+            dataFormat: 'json',
+            dataSource: {
+                chart: {
                     "caption": "User Count", "theme": "fusion"
                 }
                 ,
-                "data": []
+                data: []
             },
-            
         }
     },
     methods: {
 
           getdata(){
            axios.get('api/graphs')
+<<<<<<< HEAD
+            .then(({data})=>{
+                for(let x in data){
+                    this.dataSource.data.push({
+                        "label": x,
+                        "value": data[x].count
+                    })
+                }
+=======
             .then(res=>{
                 this.users = res.data;
                 this.dataSource.data.push({
@@ -51,6 +58,7 @@ export default {
             console.log(res)
                 // this.dataSource.value = this.users
               
+>>>>>>> master
             })
        }
 
