@@ -1,5 +1,5 @@
 # Laravel-SPA
-- A single page application with crud, graph and custom email sending I made using vue and laravel. Quit dotes?
+- A single page application with crud, graph and custom email sending I made using vue and laravel. :)))))))))))))
 
 
 
@@ -23,4 +23,4 @@ MAIL_ENCRYPTION=ssl
  - go to `127.0.0.1:8000`
  - if you want full previlage just edit the user type in the database manually and set it to `admin` all lowercase. Thanks
  
-### Feel free to use
+### Feel free to use -Vince
