@@ -1,5 +1,5 @@
 # Laravel-SPA
-- A single page application using vue and laravel
+- A single page application with crud, graph and custom email sending I made using vue and laravel. Quit dotes?
 
 
 
