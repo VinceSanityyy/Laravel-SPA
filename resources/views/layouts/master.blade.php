@@ -337,8 +337,9 @@
         <li class="treeview">
             <router-link to="/profile"> <i class="fa fa-user text-green"></i>  <span>Profile</span> </router-link>
         </li>
-        <li class="treeview">
-          <router-link to="/graph"> <i class="fa fa-paper text-green"></i>  <span>Graph</span> </router-link>
+        
+      <li class="treeview">
+        <router-link to="/sendEmail"> <i class="fa fa-envelope text-yellow"></i>  <span>Send Email</span> </router-link>
       </li>
         @can('isAdmin')
         <li class="treeview">

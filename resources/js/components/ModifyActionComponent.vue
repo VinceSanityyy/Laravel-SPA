@@ -24,7 +24,7 @@ export default {
             Fire.$emit('updated', data)
         },
         deleteUser(id) {
-            Fire.$emit('deleted', id)
+            Fire.$emit('deleted', id)                                                                             
         }
 
     }

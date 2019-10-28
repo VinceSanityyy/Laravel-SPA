@@ -43,7 +43,8 @@
         <ag-grid-vue style="width: auto; height: 500px;"
           class="ag-theme-balham"
           :columnDefs="columnDefs"
-          :rowData="rowData">
+          :rowData="rowData"
+          >
         </ag-grid-vue>
       </div>
       <div class="class card-footer">
@@ -217,7 +218,7 @@ export default {
               
             }
     },
-    createUser() {
+    createUser() { 
       this.$Progress.start();
       this.form.post("api/user")
       .then(({data}) => {

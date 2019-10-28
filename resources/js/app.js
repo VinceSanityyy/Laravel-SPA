@@ -58,6 +58,7 @@ const routes = [
     { path: '/users', component: require('./components/Users.vue').default},
     { path: '/developer', component: require('./components/Developer.vue').default},
     { path: '/graph', component: require('./components/Graph.vue').default},
+    { path: '/sendEmail', component: require('./components/SendEmail.vue').default},
     { path: '*', component: require('./components/NotFound.vue').default}
   ]
 

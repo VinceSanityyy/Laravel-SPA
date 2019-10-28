@@ -32,3 +32,5 @@ Route::get('findUser','API\UserController@search');
 
 
 Route::get('graphs', 'API\UserController@getGraph');
+
+Route::post('/sendemail', 'API\UserController@sendEmail');
