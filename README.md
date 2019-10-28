@@ -42,4 +42,5 @@ MAIL_ENCRYPTION=ssl
 - Real time notifications ✗
 - Good landing page ✗ 
 - Good User Interface ✗
+- User must type confirmation code from email before authorized to log in ✗
 - Must conver API routes to regular routes ? 
