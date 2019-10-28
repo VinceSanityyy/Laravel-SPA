@@ -24,9 +24,9 @@ return [
         'address'     => null,
 
         'logo'        => [
-            'path'   => '%PUBLIC%/vendor/beautymail/assets/images/sunny/logo.png',
-            'width'  => '',
-            'height' => '',
+            'path'   => 'https://doc-04-44-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/pqlegmcarodpifee3p7b9qe7jeko910q/1572249600000/05128615813289876347/*/17qVFBHeavaL_lG8YBjS_DS9TJktX1LPF',
+            'width'  => '250',
+            'height' => 'auto',
         ],
 
         'twitter'  => null,
