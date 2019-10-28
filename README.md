@@ -29,9 +29,9 @@ MAIL_ENCRYPTION=ssl
 
 
 ## To Do's
-- Add Graph/Chart ✓
+- Add dynamic data in Graph/Chart ✓
 - Can send dynamic email msg from users ✓
-- Make single page - modal inputs ✓
+- Make single page vue components and modal inputs ✓
 - Can add/edit profile picture ✓
 - CRUD ✓
 - Add API token for passport ✓
