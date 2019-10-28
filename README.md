@@ -4,7 +4,7 @@
 
 
 ##### Clone this project and run to your local computer
-- git clone 'repository url'
+- run in terminal/bash `git clone https://github.com/VinceSanityyy/Laravel-SPA.git`
 - run `composer install` to install php dependencies
 - run `npm install` to install node dependencies
 - run `php artisan passport:install` to get api key in authorization
