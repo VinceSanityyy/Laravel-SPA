@@ -3,8 +3,10 @@
 @section('content')
 
 	@include('beautymail::templates.widgets.newfeatureStart')
-
-		<h4 class="secondary"><strong>Test Email</strong></h4>
+	   @foreach($username as $data)
+	  
+		<h4 class="secondary"><strong>Hello there! {{$data->name}}</strong></h4>
+		@endforeach
 		<p><h3>{{$text}}</h3></p>
 		<br><br>
 		<p>

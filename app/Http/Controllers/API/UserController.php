@@ -185,19 +185,18 @@ class UserController extends Controller
 
 
     public function sendEmail(Request $request){
-        // $user = User::find(Auth::user()->id);
-        // dd($request);
-        // $user = User::findOrFail($id);
         $digits = 4;
         $rand_code = rand(pow(10, $digits-1), pow(10, $digits)-1);
         $beautymail = app()->make(\Snowfire\Beautymail\Beautymail::class);
-        $beautymail->send('emails.welcome', [ 'text' => $request->text, 'code' => $rand_code],  function($message) use($request) 
+        $beautymail->send('emails.welcome', [ 'text' => $request->text, 'code' => $rand_code, 'username' => $username = User::where('email', $request->email)->get('name')],  function($message) use($request) 
          {
            
+
             $message
                 ->from('bustillov9@gmail.com','Vince Test Email')
                 ->to($request->email)
                 ->subject('Test Email');
+            
         });
     }
 }
