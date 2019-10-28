@@ -24,6 +24,8 @@ MAIL_ENCRYPTION=ssl
  - if you want full previlage just edit the user type in the database manually and set it to `admin` all lowercase. Thanks
  
 ### Feel free to use -Vince
+- If you want to contribute or become a contributor message me in facebook. `facebook.com/vincentsanityyy`
+
 
 
 ## To Do's
