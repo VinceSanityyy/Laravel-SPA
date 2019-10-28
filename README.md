@@ -24,3 +24,18 @@ MAIL_ENCRYPTION=ssl
  - if you want full previlage just edit the user type in the database manually and set it to `admin` all lowercase. Thanks
  
 ### Feel free to use -Vince
+
+
+## To Do's
+- Add Graph/Chart ✓
+- Can send dynamic email msg from users ✓
+- Make single page - modal inputs ✓
+- Can add/edit profile picture ✓
+- CRUD ✓
+- Add API token for passport ✓
+- Add alerts/Notif/Toasts ✓
+- Convert table into data table ✗
+- Chat module ✗
+- Real time notifications ✗
+- Good landing page ✗ 
+- Good User Interface ✗
