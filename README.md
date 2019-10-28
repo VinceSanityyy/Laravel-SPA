@@ -33,9 +33,11 @@ MAIL_ENCRYPTION=ssl
 - Can add/edit profile picture ✓
 - CRUD ✓
 - Add API token for passport ✓
+- Add rules/authorization for users eg. Admin,User ✓
 - Add alerts/Notif/Toasts ✓
 - Convert table into data table ✗
 - Chat module ✗
 - Real time notifications ✗
 - Good landing page ✗ 
 - Good User Interface ✗
+- Must conver API routes to regular routes ? 
