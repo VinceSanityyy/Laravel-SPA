@@ -19,6 +19,12 @@ import FusionCharts from 'fusioncharts';
 import '../../node_modules/ag-grid-community/dist/styles/ag-grid.css' // ag-grid
 import '../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css' // ag-grid
 
+import Loading from 'vue-loading-overlay';
+// Import stylesheet
+import 'vue-loading-overlay/dist/vue-loading.css';
+// Init plugin
+Vue.use(Loading);
+
 Vue.use(VueFusionCharts, FusionCharts);
 
 import Gate from "./Gate";
@@ -59,6 +65,7 @@ const routes = [
     { path: '/developer', component: require('./components/Developer.vue').default},
     { path: '/graph', component: require('./components/Graph.vue').default},
     { path: '/sendEmail', component: require('./components/SendEmail.vue').default},
+    { path: '/chat', component: require('./components/Chat.vue').default},
     { path: '*', component: require('./components/NotFound.vue').default}
   ]
 

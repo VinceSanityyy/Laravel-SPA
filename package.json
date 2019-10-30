@@ -22,6 +22,7 @@
     "vform": "^1.0.1",
     "vue-chartjs": "^3.4.2",
     "vue-fusioncharts": "^3.0.4",
+    "vue-loading-overlay": "^3.2.0",
     "vue-progressbar": "^0.7.5",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.3"

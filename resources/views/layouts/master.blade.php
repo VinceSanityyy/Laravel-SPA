@@ -341,6 +341,9 @@
       <li class="treeview">
         <router-link to="/sendEmail"> <i class="fa fa-envelope text-yellow"></i>  <span>Send Email</span> </router-link>
       </li>
+      <li class="treeview">
+        <router-link to="/chat"> <i class="fa fa-comment text-magenta"></i>  <span>Chat</span> </router-link>
+      </li>
         @can('isAdmin')
         <li class="treeview">
             <router-link to="/developer"> <i class="fa fa-cogs text-purple"></i>  <span>Developer</span> </router-link>

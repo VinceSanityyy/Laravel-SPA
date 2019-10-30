@@ -62,15 +62,23 @@
                         })
                 },
                 sendEmail(){
-                    this.form.post('api/sendemail')
+                        $('#exampleModal').modal('hide');
+                        $(".modal-backdrop").remove();
+                         let loader = this.$loading.show({
+                            container: this.fullPage ? null : this.$refs.formContainer,
+                            onCancel: this.onCancel,
+                            color: '#c91010',
+                            loader: 'bars',
+                            width: 80,
+                            height: 100,
+                            })
+                         this.form.post('api/sendemail')
                           .then(()=>{
-                               $('#exampleModal').modal('hide');
-                               $(".modal-backdrop").remove();
-                            
-                               swal.fire("Email sent!", "", "success");
-                              
+                            swal.fire("Email sent!", "", "success");   
+                            loader.hide()                        
                           })
                           .catch((e)=>{
+                               swal.fire("Something went wrong", "", "error");   
                               console.log(e)
                           })
                 }
