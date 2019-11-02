@@ -18,6 +18,7 @@ MAIL_USERNAME=your email
 MAIL_PASSWORD=the password of your email
 MAIL_ENCRYPTION=ssl
 ```
+ - go to your gmail account and go to security settings and allow the less secure apps to true.
  - run `php artisan migrate` 
  - run `php artisan serve` and `npm run watch --poll`
  - go to `127.0.0.1:8000`
