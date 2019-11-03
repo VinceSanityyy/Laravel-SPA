@@ -26,8 +26,7 @@ MAIL_ENCRYPTION=ssl
  
 ### Feel free to use -Vince
 - If you want to contribute or become a contributor message me in facebook. `facebook.com/vincentsanityyy`
-
-
+- you can create your own branch or you can fork and request for pull. Thanks
 
 ## To Do's
 - Add dynamic data in Graph/Chart ✓
