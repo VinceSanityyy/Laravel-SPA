@@ -18,6 +18,7 @@ MAIL_USERNAME=your email
 MAIL_PASSWORD=the password of your email
 MAIL_ENCRYPTION=ssl
 ```
+ - go to your gmail account and go to security tab and allow the less secure app access to true.
  - run `php artisan migrate` 
  - run `php artisan serve` and `npm run watch --poll`
  - go to `127.0.0.1:8000`
@@ -25,8 +26,7 @@ MAIL_ENCRYPTION=ssl
  
 ### Feel free to use -Vince
 - If you want to contribute or become a contributor message me in facebook. `facebook.com/vincentsanityyy`
-
-
+- you can create your own branch or you can fork and request for pull. Thanks
 
 ## To Do's
 - Add dynamic data in Graph/Chart ✓
