@@ -196,7 +196,7 @@ class UserController extends Controller
             $message
                 ->from('bustillov9@gmail.com','Vince Test Email')
                 ->to($request->email)
-                ->subject('Test Email');
+                ->subject($request->subject);
 
         });
     }

@@ -23,6 +23,11 @@
                             </select>
                             <has-error :form="form" field="type"></has-error>
                         </div>
+                          <div class="form-group">
+                            <label>Subject</label>
+                           <input v-model="form.subject" type="text" name="subject" placeholder="Subject" class="form-control" :class="{ 'is-invalid': form.errors.has('subject') }"/>
+                            <has-error :form="form" field="text"></has-error>
+                        </div>
                         <div class="form-group">
                             <label>Message</label>
                             <textarea v-model="form.text" name="text" id="text" placeholder="Message" class="form-control" :class="{ 'is-invalid': form.errors.has('text') }"></textarea>
@@ -49,7 +54,8 @@
                     form: new Form({
                         id:'',
                         email: '',
-                        text: ''
+                        text: '',
+                        subject:''
                     }),
                     users: []
                 }
