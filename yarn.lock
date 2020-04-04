@@ -546,6 +546,13 @@
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
 
+"@babel/runtime@7.4.5":
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
+  integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/runtime@^7.2.0":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
@@ -581,6 +588,124 @@
     esutils "^2.0.2"
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
+
+"@fusioncharts/charts@^3.15.1":
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/charts/-/charts-3.15.1.tgz#0b748a8f31ac637225cb65dfd83655f705c8286b"
+  integrity sha512-NP1R8xYfMrfYqdjAB1S3KcvD7Bh/zUupu9auTi7e1i/uhRx04rE/wQrcSjJVw+DehtgkM7nezj3cbb92HCltHw==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/core" "^1.0.3"
+    "@fusioncharts/features" "^1.0.3"
+    "@fusioncharts/utils" "^1.0.3"
+
+"@fusioncharts/charts@^3.15.1-sr.1":
+  version "3.15.1-sr.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/charts/-/charts-3.15.1-sr.1.tgz#29efeda57ff7ff3f0503a2ceb5db5d18b9a12738"
+  integrity sha512-1pxDsQUSa9deVyuu0/nbutXue60o0CroKcU8MGTGjDVqehgLh95VTEFL9zuagyRf2ZfHY1pIN1w8rbSkc4h/MA==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/core" "^1.0.4"
+    "@fusioncharts/features" "^1.0.4"
+    "@fusioncharts/utils" "^1.0.4"
+
+"@fusioncharts/constructor@^1.0.3":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/constructor/-/constructor-1.0.4.tgz#170567c52731c73c4d13db947743f8e5e5d58cba"
+  integrity sha512-qWp8iwMDWcEkzYZ8qyR7l8m/SXe7NSXim5EaoL292aLeHLfEPaF7MACvFFszW99M0X8aYgF4SxMNMUCW9YsWaQ==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/core" "^1.0.4"
+    "@fusioncharts/maps" "^3.15.1-sr.1"
+
+"@fusioncharts/core@^1.0.3", "@fusioncharts/core@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/core/-/core-1.0.4.tgz#07e05750dfcc7de1568efa799b861cd6709a1e43"
+  integrity sha512-KFBdx5xMjIHDHj2j/84aNXeKpnkAfX7FF+Kk/pKTL30uF43hyYI2cOT9A1K+d10D/g12/H5+bb7xnnfiP2G30Q==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/utils" "^1.0.4"
+    core-js "^3.0.1"
+    ramda "^0.25.0"
+
+"@fusioncharts/datatable@^1.0.3", "@fusioncharts/datatable@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/datatable/-/datatable-1.0.4.tgz#270262211d2e3be6766951f0d7568827a49d2398"
+  integrity sha512-4hX3yLNUldAOdMK0aniLtZ8zFsmaj9A83gww7AIFA2TAgO06sHzeGCDNdPh1gBl4v5jlsIc7m7fhUsoI5Jr9ZA==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/utils" "^1.0.4"
+
+"@fusioncharts/features@^1.0.3", "@fusioncharts/features@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/features/-/features-1.0.4.tgz#ddb84fb28175bb9d7dcf0909c96abdf89fd473f2"
+  integrity sha512-crlzy44avHQOyWSLc2GxegvQBP4qKDyKefILK4vj/awlvVY/Rs8cp2SIgi5kjjnt3eQKJdu2SWAogWeugZY+bw==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/core" "^1.0.4"
+    "@fusioncharts/utils" "^1.0.4"
+
+"@fusioncharts/fusiontime@^2.1.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/fusiontime/-/fusiontime-2.1.1.tgz#796cadb6c32fb9442e3a9111521787d4620495ce"
+  integrity sha512-Gnn0iZpoqRhf7MQTbioEaiuYjXb4zW7OjjAnXmOeRD1N+2RYY4Z3G6ukHUQ23bKnWLgNlB3il2oE11s2sVSfqQ==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1-sr.1"
+    "@fusioncharts/core" "^1.0.4"
+    "@fusioncharts/datatable" "^1.0.4"
+    "@fusioncharts/utils" "^1.0.4"
+    ramda "^0.25.0"
+
+"@fusioncharts/maps@^3.15.1":
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/maps/-/maps-3.15.1.tgz#c6ace02004cdd7d8f92e9bdb2a0ee8af534d399d"
+  integrity sha512-kl2eX256gNtLSdnKcegFubw58opeQ/mq1FtA2eiq5Dh9PFLGT809EyVWILlBfzK3VPe9XnM5mvPJDVJhtAFrPA==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1"
+    "@fusioncharts/core" "^1.0.3"
+    "@fusioncharts/features" "^1.0.3"
+
+"@fusioncharts/maps@^3.15.1-sr.1":
+  version "3.15.1-sr.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/maps/-/maps-3.15.1-sr.1.tgz#0d4b96325770894b114d2c8f51beefdb33b95fbc"
+  integrity sha512-YGS6oFwGETeKomH6pZd7tonBRGv0GoBcELq7yUeJrSKFaeZfmeBijQvJXG4hR+rv82lWBzFz0DOdcWuCj7Pi6w==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1-sr.1"
+    "@fusioncharts/core" "^1.0.4"
+    "@fusioncharts/features" "^1.0.4"
+
+"@fusioncharts/powercharts@^3.15.1":
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/powercharts/-/powercharts-3.15.1.tgz#8be43ef5a7a2a699fac0e254ede9d249f535e7c2"
+  integrity sha512-80SUPTs7gg+dqTpMLI8Hvy5wRxmVRdc8Vek3c1oUStRvPFOr8ezcYUPsU6op4KBKAvkETbgeEzSU/kUk5Ph09w==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1"
+    "@fusioncharts/core" "^1.0.3"
+    "@fusioncharts/utils" "^1.0.3"
+
+"@fusioncharts/utils@^1.0.3", "@fusioncharts/utils@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/utils/-/utils-1.0.4.tgz#f605d10e895f1ee72027b0c89639fd5a20e16f4a"
+  integrity sha512-beQQJ4I6/robazpJeotZU4CZU7dOUchW9tNThrcSfLv56af7eHsf4tV/k3Nkgl44OFARxv9e+QZOAhnM8GB1OQ==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    ramda "^0.25.0"
+
+"@fusioncharts/widgets@^3.15.1":
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/@fusioncharts/widgets/-/widgets-3.15.1.tgz#bc3933d4108abd32f14ccdaff2ae4bf3ac50b6a3"
+  integrity sha512-xtuW1O1eAGpkLAxPr8uk9ZiAr3DfD+P0eURVyrTJijaTktzo50s1M256io595daSgwQZ23U0k0Sy6ZnQHyg61g==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1"
+    "@fusioncharts/constructor" "^1.0.3"
+    "@fusioncharts/core" "^1.0.3"
+    "@fusioncharts/features" "^1.0.3"
+    "@fusioncharts/utils" "^1.0.3"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -779,8 +904,9 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7:
     negotiator "0.6.2"
 
 acorn@^6.2.0:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.2.1.tgz#3ed8422d6dec09e6121cc7a843ca86a330a86b51"
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 adjust-sourcemap-loader@^1.1.0:
   version "1.2.0"
@@ -793,6 +919,16 @@ adjust-sourcemap-loader@^1.1.0:
     lodash.defaults "^3.1.2"
     object-path "^0.9.2"
     regex-parser "^2.2.9"
+
+ag-grid-community@^21.2.2:
+  version "21.2.2"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-21.2.2.tgz#a5696a303fa04d03d26e4c9e09e114d308ff4ad4"
+  integrity sha512-x8kQmynYM/7zoigs7wIe7DkK1TIlUP5N1TYrGPsK8vO2gN+rqOok9csGPy4YamggWTcSxpy7wji/Kcz/gUp8/w==
+
+ag-grid-vue@^21.2.2:
+  version "21.2.2"
+  resolved "https://registry.yarnpkg.com/ag-grid-vue/-/ag-grid-vue-21.2.2.tgz#87f1c4dac10949fdb184d1456aea993a42fc5c68"
+  integrity sha512-SxN3WRo/lBDmYYGN8BjuB/XqH6vEes8kC+7lfUO/nhqR3xnHZg878suunWlyPXlefaCpbEovoqZWuTQEEW703Q==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -960,12 +1096,12 @@ autoprefixer@^9.4.2:
     postcss "^7.0.17"
     postcss-value-parser "^4.0.0"
 
-axios@^0.19:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+axios@^0.19.0:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
   dependencies:
     follow-redirects "1.5.10"
-    is-buffer "^2.0.2"
 
 babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -1298,6 +1434,29 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
+chart.js@^2.8.0:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.3.tgz#ae3884114dafd381bc600f5b35a189138aac1ef7"
+  integrity sha512-+2jlOobSk52c1VU6fzkh3UwqHMdSlgH1xFv9FKMqHiNCpXsGPQa/+81AFa+i3jZ253Mq9aAycPwDjnn1XbRNNw==
+  dependencies:
+    chartjs-color "^2.1.0"
+    moment "^2.10.2"
+
+chartjs-color-string@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/chartjs-color-string/-/chartjs-color-string-0.6.0.tgz#1df096621c0e70720a64f4135ea171d051402f71"
+  integrity sha512-TIB5OKn1hPJvO7JcteW4WY/63v6KwEdt6udfnDE9iCAZgy+V4SrbSxoIbTw/xkUIapjEI4ExGtD0+6D3KyFd7A==
+  dependencies:
+    color-name "^1.0.0"
+
+chartjs-color@^2.1.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/chartjs-color/-/chartjs-color-2.4.1.tgz#6118bba202fe1ea79dd7f7c0f9da93467296c3b0"
+  integrity sha512-haqOg1+Yebys/Ts/9bLo/BqUcONQOdr/hoEr2LLTRl6C5LXctUdHxsCYfvQVg5JIxITrfCNUDr4ntqmQk9+/0w==
+  dependencies:
+    chartjs-color-string "^0.6.0"
+    color-convert "^1.9.3"
+
 "chokidar@>=2.0.0 <4.0.0", chokidar@^2.0.2, chokidar@^2.0.3, chokidar@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.6.tgz#b6cad653a929e244ce8a834244164d241fa954c5"
@@ -1400,9 +1559,10 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.9.0, color-convert@^1.9.1:
+color-convert@^1.9.0, color-convert@^1.9.1, color-convert@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
+  integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
   dependencies:
     color-name "1.1.3"
 
@@ -1559,6 +1719,11 @@ core-js-compat@^3.1.1:
 core-js-pure@3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.1.4.tgz#5fa17dc77002a169a3566cc48dc774d2e13e3769"
+
+core-js@^3.0.1:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.4.tgz#440a83536b458114b9cb2ac1580ba377dc470647"
+  integrity sha512-4paDGScNgZP2IXXilaffL9X7968RuvwlkK3xWtZRVqgd8SYNiVKRJvkFd1aqqEuPfN7E68ZHEp9hDj6lHj4Hyw==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -2452,6 +2617,25 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
+fusioncharts@^3.14.1:
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/fusioncharts/-/fusioncharts-3.15.1.tgz#2a58c4834e00018e20dec7d71a08a8d7209f9526"
+  integrity sha512-kCYHFA61h9GNyNKpA8XuGFBBQuuMYz04+q+JamfEopNTpWUJcV2E5DzUriprEb6GEvT+kQa62c8YN/KtKheRMw==
+  dependencies:
+    "@babel/runtime" "7.4.5"
+    "@fusioncharts/charts" "^3.15.1"
+    "@fusioncharts/constructor" "^1.0.3"
+    "@fusioncharts/core" "^1.0.3"
+    "@fusioncharts/datatable" "^1.0.3"
+    "@fusioncharts/features" "^1.0.3"
+    "@fusioncharts/fusiontime" "^2.1.0"
+    "@fusioncharts/maps" "^3.15.1"
+    "@fusioncharts/powercharts" "^3.15.1"
+    "@fusioncharts/utils" "^1.0.3"
+    "@fusioncharts/widgets" "^3.15.1"
+    mutationobserver-shim "^0.3.3"
+    promise-polyfill "^8.1.3"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -2946,10 +3130,6 @@ is-buffer@^1.1.5, is-buffer@~1.1.1:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
-is-buffer@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
-
 is-callable@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
@@ -3247,6 +3427,11 @@ laravel-mix@^4.0.7:
     webpack-merge "^4.1.0"
     webpack-notifier "^1.5.1"
     yargs "^12.0.5"
+
+laravel-vue-pagination@^2.3.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/laravel-vue-pagination/-/laravel-vue-pagination-2.3.1.tgz#15d04db3f67a6a203077dbbe6f9aeb3cf6bffa3c"
+  integrity sha512-I67KWSQiAJszVINoddLdHEZ1YBgDvs5lstXI88olRELBR7cQfVNUVly95kdIpHj/Qb+4L95lZ/iVfyifZfikyg==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
@@ -3608,6 +3793,16 @@ mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.10.2, moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
+momentjs@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/momentjs/-/momentjs-2.0.0.tgz#73df904b4fa418f6e3c605e831cef6ed5518ebd4"
+  integrity sha1-c9+QS0+kGPbjxgXoMc727VUY69Q=
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -3641,6 +3836,11 @@ multicast-dns@^6.0.1:
   dependencies:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
+
+mutationobserver-shim@^0.3.3:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/mutationobserver-shim/-/mutationobserver-shim-0.3.5.tgz#6f35ce85867b21aa1e58f78892d0ab4eee942c0e"
+  integrity sha512-YAMuSp4Oi19SYQF04dGnRajyFp4Wyam+jKKWzm5roPcNh1Rip8dnHPxls5F/xBgY0H2gV+3IzWuIvYQPDAvmBQ==
 
 nan@^2.12.1:
   version "2.14.0"
@@ -4451,6 +4651,11 @@ promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
 
+promise-polyfill@^8.1.3:
+  version "8.1.3"
+  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-8.1.3.tgz#8c99b3cf53f3a91c68226ffde7bde81d7f904116"
+  integrity sha512-MG5r82wBzh7pSKDRa9y+vllNHz3e3d4CNj1PQE4BQYxLme0gKYYBm9YENq+UkEikyZ0XbiGWxYlVw3Rl9O/U8g==
+
 proxy-addr@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.5.tgz#34cbd64a2d81f4b1fd21e76f9f06c8a45299ee34"
@@ -4530,6 +4735,11 @@ querystring@0.2.0:
 querystringify@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
+
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
@@ -5252,6 +5462,11 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+sweetalert2@^8.17.6:
+  version "8.19.0"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.19.0.tgz#692269bc8ddc5760e2b5070da2cf5e9e278bac0b"
+  integrity sha512-nFL++N3bitkEkd487Tv4i5ZxusmnoAAXHjtk7lp603Opxb8wlvVnz3hqa7qiIw6QFL04JC810E6qVQNf8s0vYQ==
+
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -5387,6 +5602,11 @@ uglify-js@3.4.x:
   dependencies:
     commander "~2.19.0"
     source-map "~0.6.1"
+
+underscore@^1.9.1:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.10.2.tgz#73d6aa3668f3188e4adb0f1943bd12cfd7efaaaf"
+  integrity sha512-N4P+Q/BuyuEKFJ43B9gYuOj4TQUHXX+j2FqguVOpjkssLUUrnJofCcBccJSCoeturDoZU6GorDTHSvUDlSQbTg==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -5534,14 +5754,36 @@ vendors@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.3.tgz#a6467781abd366217c050f8202e7e50cc9eef8c0"
 
+vform@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vform/-/vform-1.0.1.tgz#aedce47696c589e0c1eab9bd76a00189d6164683"
+  integrity sha512-O+6zpxxhn3/iYWBaWWwx0sjeRP6Mh5MDNHCjPALtXFT/Mef6nPHquXEAUtai96FwogkGlTQCzFADqwbOsj8E7A==
+
 vm-browserify@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
+
+vue-chartjs@^3.4.2:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/vue-chartjs/-/vue-chartjs-3.5.0.tgz#edd0c2be94c521bcbc5357c24afb9f3560855f84"
+  integrity sha512-yWNhG3B6g6lvYqNInP0WaDWNZG/SNb6XnltkjR0wYC5pmLm6jvdiotj8er7Mui8qkJGfLZe6ULjrZdHWjegAUg==
+
+vue-class-component@^7.1.0:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/vue-class-component/-/vue-class-component-7.2.3.tgz#a5b1abd53513a72ad51098752e2dedd499807cca"
+  integrity sha512-oEqYpXKaFN+TaXU+mRLEx8dX0ah85aAJEe61mpdoUrq0Bhe/6sWhyZX1JjMQLhVsHAkncyhedhmCdDVSasUtDw==
 
 vue-cli-plugin-vuetify@^0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-vuetify/-/vue-cli-plugin-vuetify-0.6.1.tgz#4fe0b7322a90a9c9f0aff2e18fd9249088b33080"
   integrity sha512-WZzXXTdFOXWXVhSL4zXs1nJvC/6Py9kXm4S+bdh+W0xucwXlIAr19cgqCjV9ahR4cznQ/SBDv8x4RFCpPgGAHQ==
+
+vue-fusioncharts@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/vue-fusioncharts/-/vue-fusioncharts-3.0.4.tgz#30a4316cf9300d8042d7623ffdc85e0f2e27992f"
+  integrity sha512-UX+nIKPIH7mvGF7UscN5e5Skk+MwOXJFO7fdacHLmZ1xBkK32baDNlqmAhjOsHH8Kuw1/9WsEmU6Ga7W1OeqzA==
+  dependencies:
+    underscore "^1.9.1"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
@@ -5557,10 +5799,27 @@ vue-loader@^15.4.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-router@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.7.tgz#b36ca107b4acb8ff5bc4ff824584059c23fcb87b"
-  integrity sha512-utJ+QR3YlIC/6x6xq17UMXeAfxEvXA0VKD3PiSio7hBOZNusA1jXcbxZxVEfJunLp48oonjTepY8ORoIlRx/EQ==
+vue-loading-overlay@^3.2.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.3.2.tgz#9853c90d9583ac2ec322da29bb90942bf65449af"
+  integrity sha512-5nBsaeb3quOBVXCgbSu9VNWkBVEsbDCupahv8dqkgbtJ00uKoNOPyw38+reWGHKNDBDl+x7x8wT8u3dV7ali7g==
+
+vue-progressbar@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vue-progressbar/-/vue-progressbar-0.7.5.tgz#414730892252b1e45582d4979dec93038e007f79"
+  integrity sha512-VeNG/inMsFbvdCTS7lJ1gjDAKSUZdqkhW9gS1tb0we1rqFKxR+BCEiVUgw5C84vODKb14M2GWHTw0WVdpoVg6g==
+
+vue-property-decorator@^8.3.0:
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-8.4.1.tgz#fd8045b8678e1348fed57f9149279e00e404ed38"
+  integrity sha512-8R4Us7DxFO0rwAL/2fv6vaZL8Oa4n/HGanHODYGTcvQHwT0FYJr9UuuFm2GoWAIXQu1mDO03HNeHswFp9vmTVA==
+  dependencies:
+    vue-class-component "^7.1.0"
+
+vue-router@^3.1.3:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+  integrity sha512-GYhn2ynaZlysZMkFE5oCHRUTqE8BWs/a9YbKpNLi0i7xD6KG1EzDqpHQmv1F5gXjr8kL5iIVS8EOtRaVUEXTqA==
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
@@ -5592,11 +5851,6 @@ vuetify-loader@^1.2.2:
   integrity sha512-emKS3GWpx+0kWRHfoxpDpLR4HaXvhDn9bYNQf+IaaD5iU5S3xktDyS0egG7dp/oHLQr1U/Ui9g2ElhZUkdgRqw==
   dependencies:
     loader-utils "^1.2.0"
-
-vuetify@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.0.2.tgz#370916d7e563e84e15dff9eccf24980c61b01e09"
-  integrity sha512-cg7zChvouAYlRhkz3g8A5B/MAOxZYmrq9fksHnWZ1Rs4ZmRwoNs5Kgexp8qaw3dxDs6cRkY7+1NaHuFc/+U0dA==
 
 watchpack@^1.5.0:
   version "1.6.0"
