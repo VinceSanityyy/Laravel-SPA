@@ -16,7 +16,7 @@
     "cli": "^1.0.1",
     "fusioncharts": "^3.14.1",
     "laravel-vue-pagination": "^2.3.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "momentjs": "^2.0.0",
     "sweetalert2": "^8.17.6",
     "vform": "^1.0.1",
